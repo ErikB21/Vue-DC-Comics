@@ -7,7 +7,6 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import MainComics from './components/MainComics.vue';
 import HeaderComics from './components/HeaderComics.vue';
 import FooterComics from './components/FooterComics.vue';
@@ -23,5 +22,5 @@ export default {
 </script>
 
 <style lang="scss">
-
+  @import './assets/style/utilities.scss';
 </style>
