@@ -1,21 +1,12 @@
 <template>
-    <header class="container-fluid">
-        <nav class="container d-flex justify-content-evenly align-items-center py-2">
-            <div class="my_height">
+    <header class="container-fluid px-5">
+        <nav class="d-flex justify-content-evenly align-items-center py-2">
+            <div class="my_height pe-5">
                 <img src="../assets/img/dc-logo.png" alt="#">
             </div>
-            <div>
-                <ul class="d-flex justify-content-center align-items-center">
-                    <li><a href="#">CHARACTERS</a></li>
-                    <li><a href="#">COMICS</a></li>
-                    <li><a href="#">MOVIES</a></li>
-                    <li><a href="#">TV</a></li>
-                    <li><a href="#">GAMES</a></li>
-                    <li><a href="#">COLLECTIBLES</a></li>
-                    <li><a href="#">VIDEOS</a></li>
-                    <li><a href="#">FANS</a></li>
-                    <li><a href="#">NEWS</a></li>
-                    <li><a href="#">SHOP</a></li>
+            <div class="ps-5">
+                <ul class="d-none d-lg-flex justify-content-center align-items-center" >
+                    <li v-for="(link, index) in links" :key="index.links" :class=" link.active ? 'active' : '' " class="px-2 list-unstyled"><a class="text-dark fs-6 text-decoration-none" :href="link.url">{{link.text}}</a></li>
                 </ul>
             </div>
         </nav>
@@ -24,18 +15,74 @@
 
 <script>
 export default {
-    name: 'HeaderComics'
+    name: 'HeaderComics',
+    data(){
+        return{
+            links:[
+                {
+                    text: 'CHARACTERS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'COMICS',
+                    url: '#',
+                    active: true
+                },
+                {
+                    text: 'MOVIES',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'TV',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'GAMES',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'COLLECTIBLES',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'VIDEOS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'FANS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'NEWS',
+                    url: '#',
+                    active: false
+                },
+                {
+                    text: 'SHOP',
+                    url: '#',
+                    active: false
+                }
+            ]
+        }   
+    }
 }
 </script>
 
 <style scoped lang="scss">
-    li{
-        padding: 0 10px;
-        list-style: none;
-        a{
-            text-decoration: none;
-            font-size: small;
-            color:black
-        }
+   .active a{
+        color: royalblue !important;
+        border-bottom: 2px solid royalblue;
+
+   }
+   li:hover a{
+        border-bottom: 2px solid royalblue;
+        color: royalblue !important; 
     }
 </style>
