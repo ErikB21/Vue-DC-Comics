@@ -1,5 +1,5 @@
 <template>
-    <div class="card border border-0 px-0 pt-5">
+    <div class="card d-flex flex-column border border-0 px-0 pt-5">
         <img :src="imageSrc" :alt="title">
         <h3 class="h5 text-white text-center py-1">{{title}}</h3>
     </div>

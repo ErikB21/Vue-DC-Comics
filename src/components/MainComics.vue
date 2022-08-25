@@ -2,9 +2,12 @@
     <main class="container-fluid position-relative">
       <div class="row my_jumbotron"></div>
       <div class="my_button btn btn-primary position-absolute start-0 p-3 rounded-0 fw-bold ms-5">CURRENT SERIES</div>
-      <div class="d-flex row my_width_main justify-content-center pb-5 flex-wrap">
-          <CardComics :key="index" v-for="(book,index) in comicsBook" :imageSrc="book.thumb" :title="book.series"/>
-          <div class="btn btn-primary my_second_button rounded-0 fw-bold">LOAD MORE</div>
+      <div class="row my_width_main justify-content-center">
+        <div class="col-12 col-sm-10 d-flex justify-content-center pb-5 flex-wrap">
+           <CardComics :key="index" v-for="(book,index) in comicsBook" :imageSrc="book.thumb" :title="book.series"/>
+            <div class="btn btn-primary my_second_button rounded-0 fw-bold">LOAD MORE</div>
+        </div>
+         
       </div>
       
   </main>
