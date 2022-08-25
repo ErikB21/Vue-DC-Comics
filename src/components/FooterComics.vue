@@ -34,9 +34,10 @@
         </div>
         <div class="row my_personal_color_bg py-3">
             <div class="col-12 d-flex justify-content-around align-items-center m-auto">
-                <div class="btn border-primary rounded-0 p-3 text-white">
+                <div class="btn btn-2 btn-2a border-primary rounded-0 p-3 text-white">
                     SIGN-UP NOW!
                 </div>
+                
                 <div class="section_social">
                     <span class="px-2 text-primary">FOLLOW US</span>
                     <a v-for="(link,index) in logoLinks" :key="index.logoLinks" :href="link.url"><img  class="px-1" :src="link.link" alt=""/></a>
