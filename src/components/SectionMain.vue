@@ -3,7 +3,7 @@
         <div class="row bg-primary py-2">
            <div class="col-12 col-md-9 justify-content-center m-auto">
                 <ul  class="list-unstyled my_role d-flex flex-wrap py-5 justify-content-evenly align-items-center">
-                    <li v-for="(link,index) in linksLogo" :key="index.linksLogo" class="cl-effect-18 rounded-5 py-4 px-2 d-flex justify-content-center align-items-center list-unstyled">
+                    <li v-for="(link,index) in linksLogo" :key="index.linksLogo" class="cl-effect-18 rounded-5 py-4 px-2 fs-6 d-flex justify-content-center align-items-center list-unstyled">
                         <a class="text-white text-decoration-none d-flex justify-content-evenly align-items-center" href="#">
                             <img :src="link.url" :alt="link.title"/>
                             <span class="px-1">{{link.title}}</span>
@@ -77,7 +77,7 @@ export default {
             left: 0;
             top: 50%;
             height: 4px;
-            margin-top: -1px;
+            margin: -1px;
             background: $my_color_header;
             content: '';
             z-index: -1;
@@ -88,15 +88,15 @@ export default {
         }
 
         .cl-effect-18 a::before {
-            -webkit-transform: translateY(-20px);
-            -moz-transform: translateY(-20px);
-            transform: translateY(-20px);
+            -webkit-transform: translateY(-50px);
+            -moz-transform: translateY(-50px);
+            transform: translateY(-50px);
         }
 
         .cl-effect-18 a::after {
-            -webkit-transform: translateY(20px);
-            -moz-transform: translateY(20px);
-            transform: translateY(20px);
+            -webkit-transform: translateY(50px);
+            -moz-transform: translateY(50px);
+            transform: translateY(50px);
         }
 
         .cl-effect-18 a:hover,
