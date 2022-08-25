@@ -4,7 +4,7 @@
         <div class="row bg-primary py-2">
            <div class="col-12 col-md-8 justify-content-center m-auto">
                 <ul  class="list-unstyled my_role d-flex flex-wrap py-3 justify-content-evenly align-items-center">
-                    <li v-for="(link,index) in linksLogo" :key="index.linksLogo" class="px-2 d-flex justify-content-center align-items-center list-unstyled">
+                    <li v-for="(link,index) in linksLogo" :key="index.linksLogo" class="rounded-5 py-4 px-2 d-flex justify-content-center align-items-center list-unstyled">
                         <a class="text-white text-decoration-none d-flex justify-content-evenly align-items-center" href="#">
                             <img :src="link.url" :alt="link.title"/>
                             <span class="px-1">{{link.title}}</span>
@@ -17,7 +17,7 @@
         <div class="row my_personal_bg justify-content-center">
             <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center pt-3">
 
-                <div class="px-2">
+                <div class="px-3">
                     <h3 class="text-white">DC COMICS</h3>
                     <ul class="p-0">
                         <li v-for="(link,index) in links" :key="index.links" class="fs-6 list-unstyled"><a class="text-decoration-none fs-6" href="">{{link.link}}</a></li>
@@ -29,14 +29,14 @@
                     </ul>        
                 </div>
 
-                <div class="px-2">
+                <div class="px-3">
                     <h3 class="text-white">DC</h3>
                     <ul class="p-0">
                         <li v-for="(link,index) in linksTwo" :key="index.linksTwo" class="fs-6 list-unstyled"><a class="text-decoration-none fs-6" href="">{{link.link}}</a></li>
                     </ul>
                 </div>
 
-                <div>
+                <div class="px-3">
                     <h3 class="text-white">SITES</h3>
                     <ul class="p-0">
                         <li v-for="(link,index) in linksThree" :key="index.linksThree" class="fs-6 list-unstyled"><a class="text-decoration-none fs-6" href="">{{link.link}}</a></li>
@@ -194,18 +194,23 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    
-    .my_role{
+    @import '../assets/style/vars.scss';
+    .my_role {
+        li:hover{
+            background-color: $my_color_header;
+            opacity: 0.6;
+        }
         img{
-            height: 50px;
-        } 
+            height: 50px; 
+        }
     }
+    
     .my_personal_bg{
         background-image:url(../assets/img/footer-bg.jpg);
         background-size:cover;
         padding: 0 180px;
         a{
-            color:#66787F;
+            color:$color_links;
         }
         .my_personal_bg_logo{
             background-image: url(../assets/img/dc-logo-bg.png);
@@ -216,10 +221,10 @@ export default {
         }   
     }
     .my_personal_color_bg{
-        background-color: #303030;
+        background-color: $bg_color_footer;
         .btn:hover{
-            background-color: rgba(255,255,255,0.6);
-            color: black!important;
+            background-color: $button_hover_bg;
+            color: $color_black !important;
         }
     }
 </style>

@@ -76,13 +76,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    @import '../assets/style/vars.scss';
    .active a{
-        color: royalblue !important;
-        border-bottom: 2px solid royalblue;
+        color: $my_color_header !important;
+        border-bottom: 2px solid $my_color_header;
 
    }
    li:hover a{
-        border-bottom: 2px solid royalblue;
-        color: royalblue !important; 
+        border-bottom: 2px solid $my_color_header;
+        color: $my_color_header !important; 
     }
 </style>

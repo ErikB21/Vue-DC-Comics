@@ -23,4 +23,5 @@ export default {
 
 <style lang="scss">
   @import './assets/style/utilities.scss';
+  @import './assets/style/vars.scss';
 </style>
