@@ -3,11 +3,10 @@
       <div class="row my_jumbotron"></div>
       <div class="my_button btn btn-primary position-absolute start-0 p-3 rounded-0 fw-bold ms-5">CURRENT SERIES</div>
       <div class="d-flex row my_width_main justify-content-center pb-5 flex-wrap">
-        
-        <CardComics :key="index" v-for="(book,index) in comicsBook" :imageSrc="book.thumb" :title="book.series"/>
-           
+          <CardComics :key="index" v-for="(book,index) in comicsBook" :imageSrc="book.thumb" :title="book.series"/>
+          <div class="btn btn-primary my_second_button rounded-0 fw-bold">LOAD MORE</div>
       </div>
-      <div class="btn btn-primary my_second_button position-absolute rounded-0 fw-bold my-1">LOAD MORE</div>
+      
   </main>
 </template>
 
@@ -107,15 +106,14 @@ export default {
     background-size: cover;
   }
   .my_button{
-    top: 32%;
+    top: 370px;
     z-index: 21;
   }
   .my_width_main{
       background-color: $bg_main;
   }
   .my_second_button{
-    bottom: 0%;
-    left: 50%;
-    transform: translate(-100%, -50%);
+    width: 150px;
+    margin-top: 10px;
   }
 </style>
